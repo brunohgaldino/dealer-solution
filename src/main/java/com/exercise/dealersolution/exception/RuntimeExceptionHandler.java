@@ -9,6 +9,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class RuntimeExceptionHandler extends ResponseEntityExceptionHandler {
 
+  //TODO: retornar exceptions customizadas
   @ExceptionHandler(RuntimeException.class)
   public ResponseEntity<String> handleException(RuntimeException runtimeException){
     return new ResponseEntity<>(runtimeException.getMessage(), HttpStatus.I_AM_A_TEAPOT);
